@@ -1,0 +1,16 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+    ". a a ."
+    ". a a .";
+}
+
+#counter {
+    font-size: 15vw;
+    grid-area: a;
+    align-self: center;
+    justify-self: center;
+}
