@@ -1,29 +1,23 @@
-
-// document.getElementById('counter').innerHTML = function(){
-//     setTimeout(){
-//         count++;
-//         1000
-//     }
-// }
-
-// setTimeout(() => {
-//     console.log("Delayed for 1 second.");
-//   }, "10000")
-
-//   console.log("coucou.")
-
-let counterDelay = setInterval(myCallback, 1000)
 let count = 0
 
-function myCallback()
-{
+document.getElementById('btnStart').onclick = function(){
 
-    count++
-    document.getElementById('counter').innerHTML = count
-    console.log(count);
+    let intervalID = setInterval(myCallback, 1000)
+
+    function myCallback(){
+        count++
+        document.getElementById('counter').innerHTML = count
+    }
+
+    document.getElementById('btnStop').onclick = function(){
+        clearInterval(intervalID)
+    }
+
+    document.getElementById('btnReset').onclick = function(){
+        clearInterval(intervalID)
+        count = 0
+        document.getElementById('counter').innerHTML = 0
+        
+    }
 
 }
-
-
-
-

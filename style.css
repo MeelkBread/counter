@@ -1,16 +1,47 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas:
-    ". a a ."
-    ". a a .";
+    justify-items: center;
 }
 
 #counter {
-    font-size: 15vw;
-    grid-area: a;
-    align-self: center;
-    justify-self: center;
+    font-size: 150pt;
+    color: rgb(25, 25, 25);
+    text-shadow: 0 0 15px rgb(155, 155, 155);
+}
+
+.btn-container {
+    display: grid;
+    margin-top: -5vh;
+}
+
+button {
+    font-size: 25pt;
+    background-color: rgb(15, 140, 255);
+    color: white;
+    border: none;
+    border-radius: 10px;
+
+    grid-column: auto;
+    grid-row: 1;
+    transition: 0.5s ease-in-out;
+
+    margin: 2vw;
+    padding: 15px;
+}
+
+button:hover{
+    background-color: rgb(0, 100, 255);
+    box-shadow: 0 0 15px rgb(155, 155, 155);
+
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+#btnReset {
+    background-color: rgb(255, 45, 45);
+}
+
+#btnReset:hover {
+    background-color: rgb(255, 0, 0);
 }
